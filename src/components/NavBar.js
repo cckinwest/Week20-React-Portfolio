@@ -4,7 +4,7 @@ import "../components/styles/NavBar.css";
 function Navbar(props) {
   //const [activeBtn, setActiveBtn] = useState("About");
 
-  //const pages = ["About", "Contact", "Portfolio", "Resume"];
+  const pages = ["About", "Contact", "Portfolio", "Resume"];
 
   const handleClick = (page) => {
     props.setActive(page);
@@ -18,6 +18,21 @@ function Navbar(props) {
     return "inActive";
   };
 
+  const renderBtn = (page) => {
+    return (
+      <li>
+        <a
+          href="#"
+          key={page}
+          onClick={() => handleClick(page)}
+          className={status(page)}
+        >
+          {page}
+        </a>
+      </li>
+    );
+  };
+
   return (
     <div>
       <h1 className="headerTitle">Chi Kin's page</h1>
@@ -25,46 +40,9 @@ function Navbar(props) {
         className="btnContainer"
         style={{ display: "flex", listStyleType: "none" }}
       >
-        <li>
-          <a
-            href={`#about`}
-            key="About"
-            onClick={() => handleClick("About")}
-            className={status("About")}
-          >
-            About
-          </a>
-        </li>
-        <li>
-          <a
-            href={`#contact`}
-            key="Contact"
-            onClick={() => handleClick("Contact")}
-            className={status("Contact")}
-          >
-            Contact
-          </a>
-        </li>
-        <li>
-          <a
-            href={`#portfolio`}
-            key="portfolio"
-            onClick={() => handleClick("Portfolio")}
-            className={status("Portfolio")}
-          >
-            Portfolio
-          </a>
-        </li>
-        <li>
-          <a
-            href={`#resume`}
-            key="resume"
-            onClick={() => handleClick("Resume")}
-            className={status("Resume")}
-          >
-            Resume
-          </a>
-        </li>
+        {pages.map((page) => {
+          return renderBtn(page);
+        })}
       </ul>
     </div>
   );
