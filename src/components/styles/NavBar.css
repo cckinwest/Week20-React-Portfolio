@@ -1,0 +1,11 @@
+.active {
+    font-weight: bold;
+    outline-style: solid;
+    border-radius: 3px;
+}
+
+a {
+    margin: 10px;
+    padding: 3px; 
+    text-decoration: none; 
+}
