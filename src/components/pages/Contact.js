@@ -22,13 +22,14 @@ function Contact() {
     e.preventDefault();
 
     if (!username || !email || !message) {
-      setWarning(`Don't leave any field empty!`);
-    } else {
-      setWarning(`Your details are submitted successfully!`);
-      setUsername("");
-      setEmail("");
-      setMessage("");
+      setWarning(`Sorry, ${username}. Don't leave any field empty!`);
+      return;
     }
+
+    setWarning(`Hi, ${username}. Your details are submitted successfully!`);
+    setUsername("");
+    setEmail("");
+    setMessage("");
   };
 
   return (
@@ -43,13 +44,15 @@ function Contact() {
           type="text"
           placeholder="Enter your name"
         ></input>
+        <br />
         <input
           name="email"
           value={email}
           onChange={handleChange}
-          type="text"
+          type="email"
           placeholder="Enter your email"
         ></input>
+        <br />
         <input
           name="message"
           value={message}
@@ -57,7 +60,8 @@ function Contact() {
           type="text"
           placeholder="Enter your message"
         ></input>
-        <button type="submit" onSubmit={handleSubmit}>
+        <br />
+        <button type="button" onClick={handleSubmit}>
           Submit
         </button>
       </form>

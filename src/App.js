@@ -1,10 +1,11 @@
-import './App.css';
-import BucketList from './components/BucketList';
+//import './App.css';
+import React from "react";
+import PageContainer from "./components/PageContainer";
 
 function App() {
   return (
-    <div className="bucket-app">
-      <BucketList />
+    <div>
+      <PageContainer />
     </div>
   );
 }

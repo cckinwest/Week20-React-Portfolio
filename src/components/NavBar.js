@@ -1,36 +1,46 @@
-import React, { useState } from "react";
+import React from "react";
 
-function Navbar() {
-  const [active, setActive] = useState("About");
-  const pages = ["About", "Contact", "Portfolio", "Resume"];
-
+function Navbar(props) {
   const handleClick = (page) => {
-    setActive(page);
-    props.render(page);
+    props.setActive(page);
   };
 
   return (
     <div>
+      <h1 className="headerTitle">Chi Kin's page</h1>
       <ul className="btnContainer">
-        {pages.map((page) => {
-          if (active === page) {
-            return (
-              <li>
-                <a className="active" onClick={handleClick(page)}>
-                  {page}
-                </a>
-              </li>
-            );
-          }
-
-          return (
-            <li>
-              <a className="inActive" onClick={handleClick(page)}>
-                {page}
-              </a>
-            </li>
-          );
-        })}
+        <li>
+          <a href={`#about`} key="About" onClick={() => handleClick("About")}>
+            About
+          </a>
+        </li>
+        <li>
+          <a
+            href={`#contact`}
+            key="Contact"
+            onClick={() => handleClick("Contact")}
+          >
+            Contact
+          </a>
+        </li>
+        <li>
+          <a
+            href={`#portfolio`}
+            key="portfolio"
+            onClick={() => handleClick("Portfolio")}
+          >
+            Portfolio
+          </a>
+        </li>
+        <li>
+          <a
+            href={`#resume`}
+            key="resume"
+            onClick={() => handleClick("Resume")}
+          >
+            Resume
+          </a>
+        </li>
       </ul>
     </div>
   );
