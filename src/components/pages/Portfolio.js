@@ -55,7 +55,10 @@ function Portfolio() {
   ];
 
   return (
-    <div className="projectsContainer">
+    <div
+      className="projectsContainer"
+      style={{ display: "flex", flexWrap: "wrap" }}
+    >
       {projects.map((project) => {
         return (
           <Card
