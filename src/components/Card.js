@@ -1,45 +1,65 @@
 import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min";
 
 function Card(props) {
   return (
-    <div
-      className="cardContainer"
+    <a
       style={{
         padding: "10px",
-        width: "300px",
-        backgroundColor: "#FFD384",
+        width: "auto",
+        backgroundColor: "#FFEBAD",
         borderRadius: "20px",
-        margin: "10px",
+        display: "flex",
+        flex: "1",
+        height: "100%",
+        textDecoration: "none",
+        color: "black",
       }}
+      href={props.url}
     >
-      <img
-        style={{
-          width: "100px",
-          height: "100px",
-          objectFit: "cover",
-          borderRadius: "50%",
-        }}
-        className="cardPic"
-        src={props.pic}
-      />
-      <div
-        style={{
-          padding: "10px",
-          width: "auto",
-          backgroundColor: "#FFF9B0",
-          borderRadius: "20px",
-        }}
-      >
+      <div style={{ width: "64%" }}>
         <h3 className="cardTitle">{props.title}</h3>
         <p className="cardBodyText">{props.description}</p>
-        <ul className="tagsContainer">
+        <ul className="tagsContainer" style={{ display: "flex" }}>
           {props.tags.map((tag) => {
-            return <li className="tag">{tag}</li>;
+            return (
+              <li
+                className="tag"
+                style={{
+                  margin: "8px",
+                  padding: "4px",
+                  borderRadius: "2px",
+                  listStyleType: "none",
+                  outlineStyle: "solid",
+                }}
+              >
+                {tag}
+              </li>
+            );
           })}
         </ul>
-        <a href={props.url}>Link</a>
       </div>
-    </div>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          width: "36%",
+        }}
+      >
+        <img
+          style={{
+            width: "80%",
+            aspectRatio: "1/1",
+            objectFit: "cover",
+            borderRadius: "50%",
+          }}
+          className="cardPic"
+          src={props.pic}
+        />
+      </div>
+    </a>
   );
 }
 

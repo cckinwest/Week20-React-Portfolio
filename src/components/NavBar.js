@@ -23,12 +23,18 @@ function Navbar(props) {
 
   const renderBtn = (page) => {
     return (
-      <li style={{ margin: "5px" }}>
+      <li style={{ margin: "5px", fontFamily: "Lucida Handwriting" }}>
         <a
           href="#"
           key={page}
           onClick={() => handleClick(page)}
           className={status(page)}
+          style={{
+            margin: "10px",
+            padding: "4px",
+            textDecoration: "none",
+            color: "black",
+          }}
         >
           {page}
         </a>
@@ -67,7 +73,14 @@ function Navbar(props) {
           justifyContent: "space-between",
         }}
       >
-        <h1 className="headerTitle">Chi Kin's page</h1>
+        <h1
+          style={{
+            fontFamily: "Roboto, sans-serif",
+            fontSize: "40px",
+          }}
+        >
+          Chi Kin's page
+        </h1>
         <button
           className="menubtn"
           style={isTabletOrMobile ? { display: "block" } : { display: "none" }}

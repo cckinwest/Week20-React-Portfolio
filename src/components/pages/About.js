@@ -2,40 +2,81 @@ import React from "react";
 import profilePic from "../pics/photo.jpg";
 
 function About() {
+  const aboutMe = [
+    `Hi, I am Chan Chi Kin. Many people here called me 'Chi' as they
+    think that it's my middle name. Actually I don't have a middle name
+    and 'Chi Kin' is my first name. Another strange thing is that my
+    surname 'Chan' comes in front of my first name.`,
+    `I came from Hong Kong in June 2022 due to You Know Who. I always
+    felt very sleepy in English lessons in HK not only because the
+    courses were extremely boring but also I did not imagined that one
+    day I would live here.`,
+    `I studied Mathematics in University because I could graduate easily
+    without doing any projects and I could find teaching vacancies,
+    which was very high-paid. Unfortunately, no schools employed me and
+    I ended up to become an editor of Maths textbooks.`,
+    `I worked day and night to earn money to pay for mortgage of a small
+    apartment, without thinking of change as I was satisfied with the
+    very very stable life. However, when I knew that I had to leave my
+    home country, I became extremely helpless as I did not have any
+    professional skills needed elsewhere.`,
+    `After coming to the UK, I have changed my mindset. I realised that
+    the only thing that could protect me is not properties or wealth,
+    but my skills, especially in the turbulent time. I am now studying
+    web application and looking forwards to becoming a full-stack
+    developer.`,
+  ];
+
+  const renderPara = (paragraph) => {
+    return <p style={{ padding: "2px" }}>{paragraph}</p>;
+  };
+
   return (
     <div
       style={{
-        padding: "10px",
-        width: "300px",
-        backgroundColor: "#FF884B",
-        borderRadius: "20px",
+        width: "100vw",
+        backgroundColor: "#FFF6BF",
       }}
     >
-      <h2 className="title">About Me</h2>
-      <br />
-      <img
-        className="profilePic"
-        src={profilePic}
+      <h2
         style={{
-          width: "100px",
-          height: "100px",
-          objectFit: "cover",
-          borderRadius: "50%",
-        }}
-      />
-      <p
-        className="content"
-        style={{
+          fontFamily: "Lucida Handwriting",
           padding: "10px",
-          width: "auto",
-          backgroundColor: "#FFF9B0",
-          borderRadius: "20px",
+          fontWeight: "bolder",
         }}
       >
-        Hi, my name is ChiKin. I came from Hong Kong and I was an editor before.
-        I don't want to do such boring job anymore, so I am taking this bootcamp
-        and hopefully I will become a full stack web developer very soon.
-      </p>
+        About Me
+      </h2>
+      <div style={{ textAlign: "center" }}>
+        <img
+          className="profilePic"
+          src={profilePic}
+          style={{
+            width: "30vw",
+            height: "30vw",
+            objectFit: "cover",
+            borderRadius: "50%",
+            margin: "10px",
+          }}
+        />
+        <div
+          className="content"
+          style={{
+            margin: "4vw",
+            padding: "3vw",
+            width: "90vw",
+            backgroundColor: "#FFEBAD",
+            borderRadius: "10px",
+            textAlign: "left",
+            fontFamily: "Times New Roman, Times, serif",
+            fontSize: "20px",
+          }}
+        >
+          {aboutMe.map((para) => {
+            return renderPara(para);
+          })}
+        </div>
+      </div>
     </div>
   );
 }
