@@ -1,10 +1,13 @@
 import React, { useState } from "react";
+import { useMediaQuery } from "react-responsive";
 import "../components/styles/NavBar.css";
 
 function Navbar(props) {
-  //const [activeBtn, setActiveBtn] = useState("About");
-
   const pages = ["About", "Contact", "Portfolio", "Resume"];
+
+  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1024px)" });
+
+  const [showMenu, setShowMenu] = useState(true);
 
   const handleClick = (page) => {
     props.setActive(page);
@@ -20,7 +23,7 @@ function Navbar(props) {
 
   const renderBtn = (page) => {
     return (
-      <li>
+      <li style={{ margin: "5px" }}>
         <a
           href="#"
           key={page}
@@ -33,18 +36,55 @@ function Navbar(props) {
     );
   };
 
+  const controlMenu = () => {
+    if (showMenu) {
+      document.querySelector(".btnContainer").style.display = "block";
+      setShowMenu(false);
+
+      return;
+    }
+
+    document.querySelector(".btnContainer").style.display = "none";
+    setShowMenu(true);
+  };
+
   return (
-    <div>
-      <h1 className="headerTitle">Chi Kin's page</h1>
+    <header
+      style={
+        isTabletOrMobile
+          ? { display: "block" }
+          : {
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+            }
+      }
+    >
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+        }}
+      >
+        <h1 className="headerTitle">Chi Kin's page</h1>
+        <button
+          className="menubtn"
+          style={isTabletOrMobile ? { display: "block" } : { display: "none" }}
+          onClick={controlMenu}
+        >
+          Menu
+        </button>
+      </div>
       <ul
         className="btnContainer"
-        style={{ display: "flex", listStyleType: "none" }}
+        style={isTabletOrMobile ? { display: "none" } : { display: "flex" }}
       >
         {pages.map((page) => {
           return renderBtn(page);
         })}
       </ul>
-    </div>
+    </header>
   );
 }
 
