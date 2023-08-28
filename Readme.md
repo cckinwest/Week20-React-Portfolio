@@ -54,4 +54,5 @@ I create a portfolio web page using React. It’ll be a place not only to share 
 
 ## Deployment
 
-- github: [Link](https://cckinwest.github.io/Week20-React-Portfolio/)
+- GitHub: [Link](https://github.com/cckinwest/Week20-React-Portfolio)
+- Page address: [Link](https://cckinwest.github.io/Week20-React-Portfolio/)
