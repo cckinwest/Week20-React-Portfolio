@@ -74,11 +74,15 @@ function Navbar(props) {
           justifyContent: "space-between",
         }}
       >
-        <h1
+        <a
+          href="#"
           style={{
             fontFamily: "Roboto, sans-serif",
             fontSize: "40px",
+            textDecoration: "none",
+            color: "black",
           }}
+          onClick={() => handleClick("About")}
         >
           Chi Kin's page
           <img
@@ -92,7 +96,7 @@ function Navbar(props) {
               margin: "10px",
             }}
           />
-        </h1>
+        </a>
 
         <button
           className="btn btn-outline-primary"
