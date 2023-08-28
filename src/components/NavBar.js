@@ -24,7 +24,7 @@ function Navbar(props) {
 
   const renderBtn = (page) => {
     return (
-      <li style={{ margin: "5px", fontFamily: "Lucida Handwriting" }}>
+      <li style={{ margin: "5px", fontFamily: "Roboto, sans-serif" }}>
         <a
           href="#"
           key={page}

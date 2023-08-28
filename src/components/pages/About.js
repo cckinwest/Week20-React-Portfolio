@@ -2,10 +2,9 @@ import React from "react";
 
 function About() {
   const aboutMe = [
-    `Hi, I am Chan Chi Kin. Many people here called me 'Chi' as they
-    think that it's my middle name. Actually I don't have a middle name
-    and 'Chi Kin' is my first name. Another strange thing is that my
-    surname 'Chan' comes in front of my first name.`,
+    `Hi, I am Chan Chi-Kin. Many people here feel confused and think
+    that my middle name is Chi. Actually, HongKongers normally don't
+    have middle names. My surname is Chan and my first name is Chi-Kin.`,
     `I came from Hong Kong in June 2022 due to You Know Who. I always
     felt very sleepy in English lessons in HK not only because the
     courses were extremely boring but also I did not imagined that one
@@ -27,7 +26,11 @@ function About() {
   ];
 
   const renderPara = (paragraph) => {
-    return <p style={{ padding: "2px" }}>{paragraph}</p>;
+    return (
+      <p style={{ padding: "2px", fontFamily: "Montserrat, sans-serif" }}>
+        {paragraph}
+      </p>
+    );
   };
 
   return (
@@ -40,7 +43,7 @@ function About() {
     >
       <h2
         style={{
-          fontFamily: "Lucida Handwriting",
+          fontFamily: "Roboto, sans-serif",
           padding: "10px",
           fontWeight: "bolder",
         }}

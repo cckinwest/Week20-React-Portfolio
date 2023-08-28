@@ -54,7 +54,7 @@ function Resume() {
     >
       <h2
         style={{
-          fontFamily: "Lucida Handwriting",
+          fontFamily: "Roboto, sans-serif",
           padding: "10px",
           fontWeight: "bolder",
         }}

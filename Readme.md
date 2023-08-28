@@ -40,7 +40,7 @@ I create a portfolio web page using React. It’ll be a place not only to share 
   ![About](./screenshot/About.png)
 - `Portfolio` contains six of my favourite projects. One can click on each project card to link to its github repository.\
   ![Portfolio](./screenshot/Portfolio.png)
-- `Contact` contains fields to input contact details. Warning messages will show until the criterias are met.\
+- `Contact` contains fields to input contact details. Warning messages will show in submission when the criterias are not met.\
   ![Contact](./screenshot/Contact.png)
 - `Resume` show my working experience to let guest to know me more. A link is there to download a pdf.\
   ![Resume](./screenshot/Resume.png)
@@ -52,7 +52,7 @@ I create a portfolio web page using React. It’ll be a place not only to share 
 - There are also responsiveness feature for the page. When the width of the page shrinks, `Menu` is shown on the right of the `Navbar`. When clicking on the `Navbar`, the buttons appear again.\
   ![Responsiveness](./screenshot/Responsiveness.png)
 
-## Deployment
+## Github and Deployment
 
 - GitHub: [Link](https://github.com/cckinwest/Week20-React-Portfolio)
-- Page address: [Link](https://cckinwest.github.io/Week20-React-Portfolio/)
+- Deployment: [Link](https://cckinwest.github.io/Week20-React-Portfolio/)
