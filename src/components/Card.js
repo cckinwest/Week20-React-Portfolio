@@ -1,6 +1,4 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.min";
 
 function Card(props) {
   return (
@@ -21,7 +19,10 @@ function Card(props) {
       <div style={{ width: "64%" }}>
         <h3 className="cardTitle">{props.title}</h3>
         <p className="cardBodyText">{props.description}</p>
-        <ul className="tagsContainer" style={{ display: "flex" }}>
+        <ul
+          className="tagsContainer"
+          style={{ display: "flex", flexWrap: "wrap" }}
+        >
           {props.tags.map((tag) => {
             return (
               <li

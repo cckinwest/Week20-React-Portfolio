@@ -1,5 +1,4 @@
 import React from "react";
-import profilePic from "../pics/photo.jpg";
 
 function About() {
   const aboutMe = [
@@ -36,6 +35,7 @@ function About() {
       style={{
         width: "100vw",
         backgroundColor: "#FFF6BF",
+        minHeight: "100vh",
       }}
     >
       <h2
@@ -48,23 +48,15 @@ function About() {
         About Me
       </h2>
       <div style={{ textAlign: "center" }}>
-        <img
-          className="profilePic"
-          src={profilePic}
-          style={{
-            width: "30vw",
-            height: "30vw",
-            objectFit: "cover",
-            borderRadius: "50%",
-            margin: "10px",
-          }}
-        />
         <div
           className="content"
           style={{
             margin: "4vw",
             padding: "3vw",
             width: "90vw",
+            maxHeight: "80vh",
+            overflowX: "hidden",
+            overflowY: "scroll",
             backgroundColor: "#FFEBAD",
             borderRadius: "10px",
             textAlign: "left",

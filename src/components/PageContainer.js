@@ -5,6 +5,7 @@ import Portfolio from "./pages/Portfolio";
 import Resume from "./pages/Resume";
 
 import Navbar from "./NavBar";
+import Footer from "./Footer";
 
 function PageContainer() {
   const [active, setActive] = useState("About");
@@ -25,6 +26,7 @@ function PageContainer() {
     <div>
       <Navbar active={active} setActive={setActive} />
       {renderPage()}
+      <Footer />
     </div>
   );
 }

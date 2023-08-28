@@ -8,9 +8,6 @@ import ManagementDB from "../pics/managementDB.png";
 import BlogApp from "../pics/blogApp.png";
 import eCommerceApp from "../pics/eCommerceApp.png";
 
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.min";
-
 function Portfolio() {
   const projects = [
     {
@@ -62,8 +59,18 @@ function Portfolio() {
       style={{
         width: "100vw",
         backgroundColor: "#FFF6BF",
+        minHeight: "100vh",
       }}
     >
+      <h2
+        style={{
+          fontFamily: "Lucida Handwriting",
+          padding: "10px",
+          fontWeight: "bolder",
+        }}
+      >
+        Portfolio
+      </h2>
       <div className="container">
         <div className="row" style={{ display: "flex", flexWrap: "wrap" }}>
           {projects.map((project) => {

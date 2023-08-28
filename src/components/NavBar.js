@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useMediaQuery } from "react-responsive";
 import "../components/styles/NavBar.css";
+import profilePic from "./pics/photo.jpg";
 
 function Navbar(props) {
   const pages = ["About", "Contact", "Portfolio", "Resume"];
@@ -80,9 +81,21 @@ function Navbar(props) {
           }}
         >
           Chi Kin's page
+          <img
+            className="profilePic"
+            src={profilePic}
+            style={{
+              height: "50px",
+              aspectRatio: "1/1",
+              objectFit: "cover",
+              borderRadius: "50%",
+              margin: "10px",
+            }}
+          />
         </h1>
+
         <button
-          className="menubtn"
+          className="btn btn-outline-primary"
           style={isTabletOrMobile ? { display: "block" } : { display: "none" }}
           onClick={controlMenu}
         >
