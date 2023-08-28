@@ -1,7 +1,8 @@
 {
-  "name": "00-practice-app",
+  "name": "react-portfolio",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://cckinwest.github.io/Week20-React-Portfolio",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^11.1.0",
@@ -10,6 +11,7 @@
     "bootstrap": "^5.3.1",
     "bootstrap-icons": "^1.10.5",
     "dotenv": "^16.3.1",
+    "gh-pages": "^6.0.0",
     "jest": "^27.5.1",
     "pretty": "^2.0.0",
     "react": "^17.0.2",
@@ -22,7 +24,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [

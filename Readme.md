@@ -49,5 +49,9 @@ I create a portfolio web page using React. It’ll be a place not only to share 
 
 ## Extra
 
-- There are also responsiveness feature for the page. When the width of the page shrinks, `Menu` is shown on the right of the `Navbar`. When clicking on the `Navbar`, the buttons appear again.
+- There are also responsiveness feature for the page. When the width of the page shrinks, `Menu` is shown on the right of the `Navbar`. When clicking on the `Navbar`, the buttons appear again.\
   ![Responsiveness](./screenshot/Responsiveness.png)
+
+## Deployment
+
+- github: [Link](https://cckinwest.github.io/Week20-React-Portfolio/)
