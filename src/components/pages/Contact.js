@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 function Contact() {
   const [data, setData] = useState({ username: "", email: "", message: "" });
@@ -82,7 +82,7 @@ function Contact() {
             class="form-control"
             placeholder="Enter your name"
           ></input>
-          <div className="form-text text-danger">
+          <div className="form-text text-danger" id="nameWarning">
             {!validUsername ? "Your name cannot be empty!" : ""}
           </div>
         </div>
@@ -101,7 +101,7 @@ function Contact() {
             class="form-control"
             placeholder="Enter your email address"
           ></input>
-          <div className="form-text text-danger">
+          <div className="form-text text-danger" id="emailWarning">
             {!validEmail ? "Your email is not valid!" : ""}
           </div>
         </div>
@@ -121,7 +121,7 @@ function Contact() {
             placeholder="Enter your message"
             rows="4"
           ></textarea>
-          <div className="form-text text-danger">
+          <div className="form-text text-danger" id="messageWarning">
             {!validMessage ? "Your message cannot be empty!" : ""}
           </div>
         </div>
