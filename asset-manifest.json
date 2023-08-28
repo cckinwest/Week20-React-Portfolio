@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Week20-React-Portfolio/static/css/main.48a41a6c.css",
-    "main.js": "/Week20-React-Portfolio/static/js/main.5e339bb1.js",
+    "main.js": "/Week20-React-Portfolio/static/js/main.7623162f.js",
     "static/media/blogApp.png": "/Week20-React-Portfolio/static/media/blogApp.6f4a750fedc1af3e27cd.png",
     "static/media/eCommerceApp.png": "/Week20-React-Portfolio/static/media/eCommerceApp.813f706d60b76e255ce3.png",
     "static/media/photo.jpg": "/Week20-React-Portfolio/static/media/photo.94aab9dae2a9aca4612c.jpg",
@@ -12,10 +12,10 @@
     "static/media/schedulerApp.png": "/Week20-React-Portfolio/static/media/schedulerApp.f2557cacaf59014a28a5.png",
     "index.html": "/Week20-React-Portfolio/index.html",
     "main.48a41a6c.css.map": "/Week20-React-Portfolio/static/css/main.48a41a6c.css.map",
-    "main.5e339bb1.js.map": "/Week20-React-Portfolio/static/js/main.5e339bb1.js.map"
+    "main.7623162f.js.map": "/Week20-React-Portfolio/static/js/main.7623162f.js.map"
   },
   "entrypoints": [
     "static/css/main.48a41a6c.css",
-    "static/js/main.5e339bb1.js"
+    "static/js/main.7623162f.js"
   ]
 }
