@@ -24,7 +24,7 @@ function Navbar(props) {
 
   const renderBtn = (page) => {
     return (
-      <li style={{ margin: "5px", fontFamily: "Roboto, sans-serif" }}>
+      <li style={{ margin: "5px", fontFamily: "Montserrat, sans-serif" }}>
         <a
           href="#"
           key={page}
@@ -77,10 +77,11 @@ function Navbar(props) {
         <a
           href="#"
           style={{
-            fontFamily: "Roboto, sans-serif",
+            fontFamily: "Montserrat, sans-serif",
             fontSize: "40px",
             textDecoration: "none",
             color: "black",
+            fontWeight: "bolder",
           }}
           onClick={() => handleClick("About")}
         >

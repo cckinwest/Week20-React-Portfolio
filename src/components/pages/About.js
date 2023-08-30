@@ -43,7 +43,7 @@ function About() {
     >
       <h2
         style={{
-          fontFamily: "Roboto, sans-serif",
+          fontFamily: "Montserrat, sans-serif",
           padding: "10px",
           fontWeight: "bolder",
         }}

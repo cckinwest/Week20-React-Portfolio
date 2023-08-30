@@ -16,6 +16,7 @@ function Portfolio() {
       description: "You will not miss anything with this app.",
       tags: ["localStorage"],
       url: "https://github.com/cckinwest/work-day-scheduler",
+      link: "https://cckinwest.github.io/work-day-scheduler/",
     },
     {
       pic: QuizApp,
@@ -23,6 +24,7 @@ function Portfolio() {
       description: "An app fetching weather information from API.",
       tags: ["API", "localStorage"],
       url: "https://github.com/cckinwest/Quiz-app",
+      link: "https://cckinwest.github.io/Quiz-app/index.html",
     },
     {
       pic: InvestmentApp,
@@ -30,6 +32,7 @@ function Portfolio() {
       description: "An app fetching finance data and news for investment.",
       tags: ["API", "localStorage", "chartJS"],
       url: "https://github.com/cckinwest/trial_project/",
+      link: "https://cckinwest.github.io/trial_project/",
     },
     {
       pic: ManagementDB,
@@ -37,6 +40,7 @@ function Portfolio() {
       description: "A backend managing data of a company.",
       tags: ["inquirer", "mySQL"],
       url: "https://github.com/cckinwest/employee-tracker",
+      link: "https://drive.google.com/file/d/1QunKPEIgGmoXljrw4vrwh7wWC9Vr1TgH/view",
     },
     {
       pic: BlogApp,
@@ -44,6 +48,7 @@ function Portfolio() {
       description: "An app for making blogPosts and comments.",
       tags: ["bootstrap", "sequelize", "handlebar"],
       url: "https://github.com/cckinwest/Week14-TechBlog",
+      link: "https://week14-techblog-app-e3396b82dfd7.herokuapp.com/",
     },
     {
       pic: eCommerceApp,
@@ -51,6 +56,7 @@ function Portfolio() {
       description: "An eShop for comphrensive shopping experience.",
       tags: ["sequelize", "stripe", "handlebar"],
       url: "https://github.com/cckinwest/Project2-WearCorp",
+      link: "https://wearcorp-app-098bafb41b6f.herokuapp.com/",
     },
   ];
 
@@ -64,7 +70,7 @@ function Portfolio() {
     >
       <h2
         style={{
-          fontFamily: "Roboto, sans-serif",
+          fontFamily: "Montserrat, sans-serif",
           padding: "10px",
           fontWeight: "bolder",
         }}
@@ -82,6 +88,7 @@ function Portfolio() {
                   description={project.description}
                   tags={project.tags}
                   url={project.url}
+                  link={project.link}
                 />
               </div>
             );
