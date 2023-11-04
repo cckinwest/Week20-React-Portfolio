@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://cckinwest.github.io/Week20-React-Portfolio",
   "dependencies": {
+    "@emailjs/browser": "^3.11.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^13.5.0",
@@ -11,11 +12,13 @@
     "bootstrap": "^5.3.1",
     "bootstrap-icons": "^1.10.5",
     "dotenv": "^16.3.1",
+    "emailjs-com": "^3.2.0",
     "gh-pages": "^6.0.0",
     "jest": "^27.5.1",
     "pretty": "^2.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-hook-form": "^7.47.0",
     "react-responsive": "^9.0.2",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
