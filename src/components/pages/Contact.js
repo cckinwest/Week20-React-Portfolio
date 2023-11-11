@@ -3,10 +3,10 @@ import Form from "../Form";
 
 function Contact() {
   const [data, setData] = useState({ username: "", email: "", message: "" });
-  const re = /^([\da-z\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
+
   const dataStatus = {
     username: data.username.length === 0,
-    email: !re.test(data.email),
+    email: !/^([\da-z\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/.test(data.email),
     message: data.message.length === 0,
   };
 
