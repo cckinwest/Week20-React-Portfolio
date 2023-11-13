@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
-//import { useForm } from "react-hook-form";
+//import { google } from "googleapis";
+//import axios from "axios";
 import emailjs from "@emailjs/browser";
 import Input from "./Input";
 import TextArea from "./TextArea";
@@ -10,6 +11,28 @@ function Form({ data, dataStatus, setData }) {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setData({ ...data, [name]: value });
+  };
+
+  const appendForm = async (info) => {
+    try {
+      const response = await fetch(
+        "https://sheet.best/api/sheets/d9803fe0-ec3b-4d75-b203-879bf724a1df",
+        {
+          method: "POST",
+          mode: "cors",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(info),
+        }
+      );
+
+      const data = await response.json();
+
+      console.log(data);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const sendEmail = () => {
@@ -27,43 +50,44 @@ function Form({ data, dataStatus, setData }) {
     );
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!dataStatus.username && !dataStatus.email && !dataStatus.message) {
+    if (!dataStatus.Username && !dataStatus.Email && !dataStatus.Message) {
       sendEmail();
+      await appendForm(data);
 
       alert(`Your details are submitted successfully!`);
-      setData({ username: "", email: "", message: "" });
+      setData({ Username: "", Email: "", Message: "" });
     }
   };
 
   return (
     <form ref={form} className="container">
       <Input
-        name="username"
-        value={data.username}
+        name="Username"
+        value={data.Username}
         placeholder="Enter your name"
         onChange={handleChange}
-        valid={!dataStatus.username}
+        valid={!dataStatus.Username}
         warning="Name cannot be empty!"
       />
 
       <Input
-        name="email"
-        value={data.email}
+        name="Email"
+        value={data.Email}
         placeholder="Enter your email"
         onChange={handleChange}
-        valid={!dataStatus.email}
+        valid={!dataStatus.Email}
         warning="Email is not valid!"
       />
 
       <TextArea
-        name="message"
-        value={data.message}
+        name="Message"
+        value={data.Message}
         placeholder="Enter your message"
         onChange={handleChange}
-        valid={!dataStatus.message}
+        valid={!dataStatus.Message}
         warning="Message cannot be empty!"
       />
 
